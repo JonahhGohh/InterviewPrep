@@ -8,13 +8,17 @@ public class LinkedList<T> {
     }
 
     public LinkedList(T[] arr) {
-        Node<T> node = new Node<>(arr[arr.length - 1], null);
-        for (int i = arr.length - 2; i >= 0; i--) {
-            Node<T> newNode = new Node<>(arr[i], null);
-            newNode.setNext(node);
-            node = newNode;
+        if (arr.length == 0) {
+            head = null;
+        } else {
+            Node<T> node = new Node<>(arr[arr.length - 1], null);
+            for (int i = arr.length - 2; i >= 0; i--) {
+                Node<T> newNode = new Node<>(arr[i], null);
+                newNode.setNext(node);
+                node = newNode;
+            }
+            head = node;
         }
-        head = node;
     }
 
     public Node<T> getHead() {
