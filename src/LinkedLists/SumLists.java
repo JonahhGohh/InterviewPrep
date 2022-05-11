@@ -28,6 +28,4 @@ public class SumLists {
             return new Node<>(totalValue + carry, oldNode);
         }
     }
-
-
 }
