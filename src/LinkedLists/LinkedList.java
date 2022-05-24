@@ -25,6 +25,10 @@ public class LinkedList<T> {
         return head;
     }
 
+    public void setHead(Node<T> head) {
+        this.head = head;
+    }
+
     /** Returns true if node is deleted successfully, false otherwise */
     public boolean deleteNode(int index) {
         Node<T> prevNode = null;
