@@ -22,9 +22,14 @@ public class Main {
         node3.setRight(node4);
         node7.setLeft(node6);
         node2.setLeft(node1);
-        BST<Integer> bst = new BST<>(node5);
+        BST<Integer> T1 = new BST<>(node5);
 
-        BSTSequences.solve(bst);
+        Node<Integer> node6copy = new Node<>(6);
+        Node<Integer> node7copy = new Node<>(7);
+        node7copy.setLeft(node6copy);
+        BST<Integer> T2 = new BST<>(node7copy);
+
+        System.out.println(CheckSubtree.solveMatchTree(T1, T2));
 
     }
 }
